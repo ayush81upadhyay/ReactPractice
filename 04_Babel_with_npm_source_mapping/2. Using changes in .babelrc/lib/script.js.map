@@ -1,0 +1,28 @@
+{
+    "version": 3,
+    "file": "script.js",
+    "names": [
+        "user",
+        "h2",
+        "React",
+        "createElement",
+        "style",
+        "color",
+        "console",
+        "log",
+        "root",
+        "ReactDOM",
+        "createRoot",
+        "document",
+        "querySelector",
+        "render"
+    ],
+    "sources": [
+        "../script.js"
+    ],
+    "sourcesContent": [
+        "const user = \"Amitabh\";\r\n\r\n\r\nconst h2 = (<h1 style={{color: \"red\"}}><p>Initials</p>Intro to Babel with NPM{user} </h1>);\r\nconsole.log(h2);\r\nconst root = ReactDOM.createRoot(document.querySelector('#root'));\r\nroot.render(h2);"
+    ],
+    "mappings": "AAAA,MAAMA,IAAI,GAAG,SAAS;AAGtB,MAAMC,EAAE,gBAAIC,KAAA,CAAAC,aAAA;EAAIC,KAAK,EAAE;IAACC,KAAK,EAAE;EAAK;AAAE,gBAACH,KAAA,CAAAC,aAAA,YAAG,UAAW,CAAC,2BAAuB,EAACH,IAAI,EAAC,GAAK,CAAE;AAC1FM,OAAO,CAACC,GAAG,CAACN,EAAE,CAAC;AACf,MAAMO,IAAI,GAAGC,QAAQ,CAACC,UAAU,CAACC,QAAQ,CAACC,aAAa,CAAC,OAAO,CAAC,CAAC;AACjEJ,IAAI,CAACK,MAAM,CAACZ,EAAE,CAAC",
+    "ignoreList": []
+}

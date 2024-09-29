@@ -1,0 +1,5 @@
+{
+    "presets" : ["@babel/preset-react"],
+    // another way of doing source mappping
+    "sourceMaps": true
+}
