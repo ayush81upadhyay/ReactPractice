@@ -12,5 +12,7 @@ const Card = (
         <h3>256 GB Ram</h3>
     </div>
     );
+
+const card_container = [Card, Card, Card, Card];
 const root = createRoot(document.getElementById("root"));
-root.render(Card);
+root.render(card_container);

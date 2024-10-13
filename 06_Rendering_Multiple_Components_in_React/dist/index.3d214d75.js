@@ -3003,8 +3003,14 @@ const Card = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
     lineNumber: 7,
     columnNumber: 5
 }, undefined);
+const card_container = [
+    Card,
+    Card,
+    Card,
+    Card
+];
 const root = (0, _client.createRoot)(document.getElementById("root"));
-root.render(Card);
+root.render(card_container);
 
   $parcel$ReactRefreshHelpers$e4e3.postlude(module);
 } finally {
