@@ -2957,60 +2957,66 @@ var _client = require("react-dom/client");
 var _appleIphone12R1Jpg = require("./assests/images/apple-iphone-12-r1.jpg");
 var _appleIphone12R1JpgDefault = parcelHelpers.interopDefault(_appleIphone12R1Jpg);
 var _styleCss = require("./style.css");
-console.log((0, _appleIphone12R1JpgDefault.default));
-const Card = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-    className: "card",
-    children: [
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            src: (0, _appleIphone12R1JpgDefault.default),
-            alt: "iphone12"
-        }, void 0, false, {
-            fileName: "index.js",
-            lineNumber: 8,
-            columnNumber: 9
-        }, undefined),
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Apple"
-        }, void 0, false, {
-            fileName: "index.js",
-            lineNumber: 9,
-            columnNumber: 9
-        }, undefined),
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-            children: "$24"
-        }, void 0, false, {
-            fileName: "index.js",
-            lineNumber: 10,
-            columnNumber: 9
-        }, undefined),
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-            children: "5 Star"
-        }, void 0, false, {
-            fileName: "index.js",
-            lineNumber: 11,
-            columnNumber: 9
-        }, undefined),
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-            children: "256 GB Ram"
-        }, void 0, false, {
-            fileName: "index.js",
-            lineNumber: 12,
-            columnNumber: 9
-        }, undefined)
-    ]
-}, void 0, true, {
-    fileName: "index.js",
-    lineNumber: 7,
-    columnNumber: 5
-}, undefined);
+// Created a function which is returning the jSX
+const Card = (key)=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _appleIphone12R1JpgDefault.default),
+                alt: "iphone12"
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 9,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Apple"
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 10,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "$24"
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 11,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "5 Star"
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 12,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: "256 GB Ram"
+            }, void 0, false, {
+                fileName: "index.js",
+                lineNumber: 13,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, key, true, {
+        fileName: "index.js",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Card;
+// Passed functions in an array with arguments in it
 const card_container = [
-    Card,
-    Card,
-    Card,
-    Card
+    Card(1),
+    Card(2),
+    Card(3),
+    Card(4)
 ];
 const root = (0, _client.createRoot)(document.getElementById("root"));
 root.render(card_container);
+var _c;
+$RefreshReg$(_c, "Card");
 
   $parcel$ReactRefreshHelpers$e4e3.postlude(module);
 } finally {
