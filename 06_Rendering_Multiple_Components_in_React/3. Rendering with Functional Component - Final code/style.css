@@ -1,0 +1,15 @@
+.card{
+    border:1px solid black;
+    max-width: 100px;
+    max-height: 500px;
+    margin: 20px;
+}
+.card img{
+    width: 100%;
+    max-height: 150px;
+}
+#root{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
