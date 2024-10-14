@@ -2,7 +2,7 @@ import { createRoot } from "react-dom/client";
 import imgURL from './assests/images/apple-iphone-12-r1.jpg';
 import './style.css';
 
-// Created a function which is returning the jSX
+// Created a function which is returning the jSX [key is required to be given]
 const Card = (key) => {
     return (
     <div className="card" key={key}>
