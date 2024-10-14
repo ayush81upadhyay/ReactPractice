@@ -2951,19 +2951,17 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$e4e3.prelude(module);
 
 try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
-var _appleIphone12R1Jpg = require("./assests/images/apple-iphone-12-r1.jpg");
-var _appleIphone12R1JpgDefault = parcelHelpers.interopDefault(_appleIphone12R1Jpg);
 var _styleCss = require("./style.css");
-// Created a function which is returning the jSX
-const Card = (key)=>{
+// Used object destructuring in very beginning
+const Card = ({ imgURL, title, brand, price, rating })=>{
+    console.log(imgURL + title + brand + price + rating);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _appleIphone12R1JpgDefault.default),
+                src: imgURL,
                 alt: "iphone12"
             }, void 0, false, {
                 fileName: "index.js",
@@ -2971,50 +2969,63 @@ const Card = (key)=>{
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Apple"
+                children: title
             }, void 0, false, {
                 fileName: "index.js",
                 lineNumber: 10,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "$24"
+                children: brand
             }, void 0, false, {
                 fileName: "index.js",
                 lineNumber: 11,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "5 Star"
+                children: price
             }, void 0, false, {
                 fileName: "index.js",
                 lineNumber: 12,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "256 GB Ram"
+                children: rating
             }, void 0, false, {
                 fileName: "index.js",
                 lineNumber: 13,
                 columnNumber: 9
             }, undefined)
         ]
-    }, key, true, {
+    }, void 0, true, {
         fileName: "index.js",
         lineNumber: 8,
         columnNumber: 5
     }, undefined);
 };
 _c = Card;
-// Passed functions in an array with arguments in it
-const card_container = [
-    Card(1),
-    Card(2),
-    Card(3),
-    Card(4)
-];
-const root = (0, _client.createRoot)(document.getElementById("root"));
-root.render(card_container);
+fetch("https://dummyjson.com/products").then((res)=>res.json()).then((data)=>{
+    console.log(data);
+    // map iterates over an array and for each element of it, runs the function inside
+    const card_container = data.products.map((product)=>{
+        //Way-1
+        //return Card({imgURL: product.thumbnail, key: product.id, title: product.title, brand: product.brand, price: product.price, rating: product.rating});
+        //OR Way-2
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {
+            imgURL: product.thumbnail,
+            title: product.title,
+            brand: product.brand,
+            price: product.price,
+            rating: product.rating
+        }, void 0, false, {
+            fileName: "index.js",
+            lineNumber: 28,
+            columnNumber: 15
+        }, undefined);
+    });
+    const root = (0, _client.createRoot)(document.getElementById("root"));
+    root.render(card_container);
+});
 var _c;
 $RefreshReg$(_c, "Card");
 
@@ -3023,7 +3034,7 @@ $RefreshReg$(_c, "Card");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./assests/images/apple-iphone-12-r1.jpg":"76Zt1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./style.css":"dRy26"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./style.css":"dRy26"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27404,74 +27415,6 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"76Zt1":[function(require,module,exports) {
-module.exports = require("e5d985a60acf2e26").getBundleURL("UckoE") + "apple-iphone-12-r1.5b3fa0b0.jpg" + "?" + Date.now();
-
-},{"e5d985a60acf2e26":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"dRy26":[function() {},{}]},["km5uZ","1xC6H","bB7Pu"], "bB7Pu", "parcelRequiref9e8")
+},{"7422ead32dcc1e6b":"786KC"}],"dRy26":[function() {},{}]},["km5uZ","1xC6H","bB7Pu"], "bB7Pu", "parcelRequiref9e8")
 
 //# sourceMappingURL=index.3d214d75.js.map
