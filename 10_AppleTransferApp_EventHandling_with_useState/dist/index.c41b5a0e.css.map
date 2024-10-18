@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;AAGA;;;;;;AAKA","sources":["App.module.css"],"sourcesContent":[".abc{\r\n    width: 200px;\r\n}\r\n.abc2{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    margin: 200px;   \r\n}\r\n.abc3{\r\n    font-size: xx-large;\r\n}"],"names":[],"version":3,"file":"index.c41b5a0e.css.map","sourceRoot":"/__parcel_source_root/"}
