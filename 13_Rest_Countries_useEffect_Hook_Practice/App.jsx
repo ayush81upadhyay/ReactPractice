@@ -15,7 +15,7 @@ const App = () => {
                     <SearchBar Setquery={Setquery} />
                     <SelectMenu />
                 </div>
-                <CountriesList query={query} />
+                {query==='6'? '' : <CountriesList query={query} />}
             </main>
         </>
     )
